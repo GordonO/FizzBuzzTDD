@@ -2,16 +2,28 @@ package mainTest;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import main.FizzBuzz;
 
 public class FizzBuzzTest {
 
+	FizzBuzz fizzBuzz;
+	
+	@Before
+	public void setup(){
+		fizzBuzz = new FizzBuzz();
+	}
+	
 	@Test
 	public void whenFizzBuzzIsPassedAThreeItReturnsFizz() {
-		FizzBuzz fizzBuzz = new FizzBuzz();
 		assertEquals("Fizz",fizzBuzz.fizz(3));
+	}
+	
+	@Test
+	public void whenFizzBuzzIsPassedAFiveItReturnsBuzz(){
+		assertEquals("Buzz",fizzBuzz.buzz(5));
 	}
 
 }

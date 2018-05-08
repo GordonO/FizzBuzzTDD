@@ -7,4 +7,10 @@ public class FizzBuzz {
 		if(number == 3) return "Fizz";
 		else return "NO";
 	}
+	
+	public String buzz(int number){
+		
+		if(number == 5) return "Buzz";
+		else return "NO";
+	}
 }
