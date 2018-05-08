@@ -35,5 +35,10 @@ public class FizzBuzzTest {
 	public void whenFizzBuzzIsPassedAMultipleOfFiveItReturnsBuzz(){
 		assertEquals("Buzz",fizzBuzz.buzz(10));
 	}
+	
+	@Test
+	public void whenFizzBuzzIsPassedAMultipleOfThreeAndFiveItReturnsFizzBuzz(){
+		assertEquals("FizzBuzz",fizzBuzz.decision(15));
+	}
 
 }
