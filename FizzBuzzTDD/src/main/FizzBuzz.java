@@ -10,7 +10,7 @@ public class FizzBuzz {
 	
 	public String buzz(int number){
 		
-		if(number == 5) return "Buzz";
+		if(number % 5 == 0) return "Buzz";
 		else return "NO";
 	}
 }
