@@ -2,30 +2,33 @@ package main;
 
 public class FizzBuzz {
 	
-	public String decision(Integer pInputNumber){
+	public String getFizzBuzz(Integer inputNumber){
 		
-		String sFizz, sBuzz, sDecision;
+		if(setFizz(inputNumber) == "Fizz" & setBuzz(inputNumber) == "Buzz")
+			return setFizz(inputNumber) + setBuzz(inputNumber);
 		
-		sDecision = "";
-		sFizz = fizz(pInputNumber);
-		sBuzz = buzz(pInputNumber);
+		if(setFizz(inputNumber) == "Fizz")
+			return setFizz(inputNumber);
 		
-		if(sFizz == "Fizz") sDecision = sFizz;
-		if(sBuzz == "Buzz") sDecision = sDecision + sBuzz;
-		if(sFizz == "No" & sBuzz == "No") sDecision = pInputNumber.toString();
+		if(setBuzz(inputNumber) == "Buzz")
+			return setBuzz(inputNumber);
 		
-		return sDecision;
+		return inputNumber.toString();
 	}
 	
-	public String fizz(int pFizzNumber){
+	public String setFizz(int fizzNumber){
 		
-		if(pFizzNumber % 3 == 0) return "Fizz";
-		else return "No";
+		if(fizzNumber % 3 == 0)
+			return "Fizz";
+		else
+			return "No";
 	}
 	
-	public String buzz(int pBuzzNumber){
+	public String setBuzz(int buzzNumber){
 		
-		if(pBuzzNumber % 5 == 0) return "Buzz";
-		else return "No";
+		if(buzzNumber % 5 == 0)
+			return "Buzz";
+		else
+			return "No";
 	}
 }
