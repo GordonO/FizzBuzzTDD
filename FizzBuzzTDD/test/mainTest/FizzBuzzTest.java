@@ -45,5 +45,11 @@ public class FizzBuzzTest {
 	public void whenFizzBuzzIsPassedANonMultipleOfThreeOrFiveItReturnsThatNumber(){
 		assertEquals("1",fizzBuzz.getFizzBuzz(1));
 	}
+	
+	@Test
+	public void whenFizzBuzzIsPassedANumberReturnAnArrayUpToThatNumber(){
+		String[] arrayResult = {"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz"};
+		assertArrayEquals(arrayResult, fizzBuzz.getFizzBuzzArray(12));
+	}
 
 }

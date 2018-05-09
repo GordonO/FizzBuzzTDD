@@ -31,4 +31,16 @@ public class FizzBuzz {
 		else
 			return "No";
 	}
+	
+	public String[] getFizzBuzzArray(int arrayNumber){
+		
+		String[] fizzBuzzArray = new String[arrayNumber];
+		
+		for(int i = 0; i <= arrayNumber - 1; i++){
+			
+			fizzBuzzArray[i] = getFizzBuzz(i + 1);
+		}
+		
+		return fizzBuzzArray;
+	}
 }
